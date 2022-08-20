@@ -20,19 +20,19 @@
             <div class="menu__wrapper">
                 <ul class="side__menus">
                     <li class="menu__item">
-                        <a href="index.html" class="menu__link menu__active">
+                        <a href="{% url 'index' %}" class="menu__link menu__active">
                             <img src="{% static 'img/dashboard.png' %}" alt="stockFull" class="img-fluid">
                             <img src="{% static 'img/dashboard-active.png' %}" alt="stockfull" class="img-fluid active-img">
                         </a>
                     </li>
                     <li class="menu__item">
-                        <a href="scene.html" class="menu__link">
+                        <a href="{% url 'scene' %}" class="menu__link">
                             <img src="{% static 'img/scenes.png' %}" alt="stockfull" class="img-fluid">
                             <img src="{% static 'img/scene-active.png' %}" alt="stockfull" class="img-fluid">
                         </a>
                     </li>
                     <li class="menu__item">
-                        <a href="all-scene.html" class="menu__link">
+                        <a href="{% url 'all_scene' %}" class="menu__link">
                             <img src="{% static 'img/cameras.png' %}" alt="stockfull" class="img-fluid cameras-img">
                             <img src="{% static 'img/all--scene-active.png' %}" alt="stockfull" class="img-fluid">
                         </a>
