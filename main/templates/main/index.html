@@ -1,0 +1,383 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockFull</title>
+    <!--Bootstap CSS File-->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Theme CSS File -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Media CSS File -->
+    <link rel="stylesheet" href="{% static 'css/media.css' %}">
+</head>
+<body>
+    <main class="main__area-wrapper">
+        <!-- Side Nav Start Here -->
+        <header class="sidenav__area" id="sidenav">
+            <div class="menu__wrapper">
+                <ul class="side__menus">
+                    <li class="menu__item">
+                        <a href="index.html" class="menu__link menu__active">
+                            <img src="{% static 'img/dashboard.png' %}" alt="stockFull" class="img-fluid">
+                            <img src="{% static 'img/dashboard-active.png' %}" alt="stockfull" class="img-fluid active-img">
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="scene.html" class="menu__link">
+                            <img src="{% static 'img/scenes.png' %}" alt="stockfull" class="img-fluid">
+                            <img src="{% static 'img/scene-active.png' %}" alt="stockfull" class="img-fluid">
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="all-scene.html" class="menu__link">
+                            <img src="{% static 'img/cameras.png' %}" alt="stockfull" class="img-fluid cameras-img">
+                            <img src="{% static 'img/all--scene-active.png' %}" alt="stockfull" class="img-fluid">
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">
+                            <img src="{% static 'img/trash.png' %}" alt="stockfull" class="img-fluid trash-img">
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">
+                            <img src="{% static 'img/settings.png' %}" alt="stockfull" class="img-fluid trash-img">
+                        </a>
+                    </li>
+                </ul>
+                <ul class="admin__menu">
+                    <li class="menu__item">
+                        <a href="" class="menu__link">
+                            <img src="{% static 'img/admin.png' %}" alt="stockFull" class="img-fluid">
+                        </a>
+                    </li>
+                </ul>    
+            </div>
+        </header>
+        <!-- Side Nav End Here -->
+        <!-- Main Content Start Here -->
+        <div class="main__content dashboard--page">
+            <!-- Top Nav Area -->
+            <div class="topnav__area">
+                <div class="page--title">
+                    <h3>Dashboard</h3>
+                </div>
+                <div class="nav__item-wrapper">
+                    <ul class="topnav--nav">
+                        <li class="topnav__item">
+                            <a href="#" class="topnav__link add__camera-btn">
+                                <span>Add Camera</span>
+                                <span>
+                                    <svg width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.769 14.5674L25.0527 2.72479C25.2411 2.52719 25.3462 2.26467 25.3462 1.99167C25.3462 1.71867 25.2411 1.45614 25.0527 1.25854L25.04 1.24579C24.9487 1.14967 24.8388 1.07313 24.7169 1.02082C24.5951 0.968518 24.4639 0.941545 24.3313 0.941545C24.1987 0.941545 24.0675 0.968518 23.9457 1.02082C23.8239 1.07313 23.7139 1.14967 23.6226 1.24579L12.9976 12.3978L2.37688 1.24579C2.28556 1.14967 2.17564 1.07313 2.05381 1.02082C1.93198 0.968518 1.80078 0.941545 1.6682 0.941545C1.53561 0.941545 1.40441 0.968518 1.28258 1.02082C1.16075 1.07313 1.05083 1.14967 0.959509 1.24579L0.946756 1.25854C0.758387 1.45614 0.653303 1.71867 0.653303 1.99167C0.653303 2.26467 0.758387 2.52719 0.946756 2.72479L12.2305 14.5674C12.3297 14.6716 12.4491 14.7545 12.5813 14.8111C12.7135 14.8678 12.8559 14.897 12.9997 14.897C13.1436 14.897 13.286 14.8678 13.4182 14.8111C13.5504 14.7545 13.6698 14.6716 13.769 14.5674Z" fill="white"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="topnav__item">
+                            <a href="" class="topnav__link notification">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M26 16.586V14H24V17C24.0001 17.2652 24.1054 17.5195 24.293 17.707L27 20.414V22H5V20.414L7.707 17.707C7.89455 17.5195 7.99994 17.2652 8 17V13C7.99721 11.5948 8.3653 10.2137 9.06709 8.99632C9.76887 7.7789 10.7795 6.76823 11.9969 6.06641C13.2143 5.36458 14.5953 4.99644 16.0005 4.99918C17.4058 5.00192 18.7853 5.37543 20 6.082V3.847C19.0481 3.42552 18.0356 3.15688 17 3.051V1H15V3.05C12.5346 3.30093 10.2498 4.45712 8.58737 6.29498C6.92498 8.13285 6.0031 10.5218 6 13V16.586L3.293 19.293C3.10545 19.4805 3.00006 19.7348 3 20V23C3 23.2652 3.10536 23.5196 3.29289 23.7071C3.48043 23.8946 3.73478 24 4 24H11V25C11 26.3261 11.5268 27.5979 12.4645 28.5355C13.4021 29.4732 14.6739 30 16 30C17.3261 30 18.5979 29.4732 19.5355 28.5355C20.4732 27.5979 21 26.3261 21 25V24H28C28.2652 24 28.5196 23.8946 28.7071 23.7071C28.8946 23.5196 29 23.2652 29 23V20C28.9999 19.7348 28.8946 19.4805 28.707 19.293L26 16.586ZM19 25C19 25.7956 18.6839 26.5587 18.1213 27.1213C17.5587 27.6839 16.7956 28 16 28C15.2044 28 14.4413 27.6839 13.8787 27.1213C13.3161 26.5587 13 25.7956 13 25V24H19V25Z" fill="black"/>
+                                    <path d="M26 12C28.2091 12 30 10.2091 30 8C30 5.79086 28.2091 4 26 4C23.7909 4 22 5.79086 22 8C22 10.2091 23.7909 12 26 12Z" fill="#0060FF"/>
+                                </svg>    
+                            </a>
+                        </li>
+                        <li class="topnav__item">
+                            <a href="#" class="topnav__link profile">
+                                <img src="{% static 'img/profile--img.png' %}" alt="stockfull" class="img-fluid">
+                            </a>
+                        </li>
+                        <li class="topnav__item toggle__menu">
+                            <button id="toggle__menu">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Top Nav Area -->
+            <!-- Activity--Stats--Planogram Area -->
+            <div class="activity--stats--planogram__area">
+                <div class="activity--wrapper">
+                    <div class="activity--title">
+                        <h4 class="subheading">Activity</h4>
+                        <a href="#">
+                            <img src="{% static 'img/3-dots.png' %}" alt="stockfull" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="activity--content">
+                        <div class="activity--content--wrapper">
+                            <div class="activity--chart">
+                                <div class="daily--activity">
+                                    <div class="chart--col" style="height:40%; background:rgba(0, 96, 255, 0.9);"></div>
+                                    <span>Sun</span>
+                                </div>
+                                <div class="daily--activity">
+                                    <div class="chart--col" style="height:80%; background:rgba(0, 96, 255, 0.5);"></div>
+                                    <span>Mon</span>
+                                </div>
+                                <div class="daily--activity">
+                                    <div class="chart--col" style="height:25%; background:rgba(0, 96, 255, 0.5);"></div>
+                                    <span>Tue</span>
+                                </div>
+                                <div class="daily--activity">
+                                    <div class="chart--col" style="height:35%; background:rgba(0, 96, 255, 0.9);"></div>
+                                    <span class="today">Wed</span>
+                                </div>
+                                <div class="daily--activity">
+                                    <div class="chart--col" style="height:55%; background:rgba(0, 96, 255, 0.9);"></div>
+                                    <span>Thur</span>
+                                </div>
+                                <div class="daily--activity">
+                                    <div class="chart--col" style="height:80%; background:rgba(0, 96, 255, 0.5);"></div>
+                                    <span>Fri</span>
+                                </div>
+                                <div class="daily--activity">
+                                    <div class="chart--col" style="height:45%; background:rgba(0, 96, 255, 0.9);"></div>
+                                    <span>Sat</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stats--wrapper">
+                    <div class="stats--title">
+                        <h4 class="subheading">Stats</h4>
+                        <a href="#">
+                            <img src="{% static 'img/3-dots.png' %}" alt="stockfull" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="stats--content">
+                        <div class="stats--content-wrapper">
+                            <div class="stats--chart">
+                                <svg width="216" height="215" viewBox="0 0 216 215" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M199.326 107.778C207.971 107.778 215.161 114.823 213.903 123.375C211.321 140.938 204.403 157.671 193.67 172.014C179.796 190.556 160.29 204.107 138.073 210.641C115.855 217.174 92.119 216.338 70.416 208.257C53.6275 202.007 38.7535 191.681 27.0756 178.312C21.3888 171.801 23.6212 161.986 30.8897 157.307V157.307C38.1582 152.627 47.8016 154.841 53.8721 160.995C61.591 168.821 70.966 174.919 81.384 178.798C96.7241 184.51 113.501 185.101 129.205 180.483C144.909 175.865 158.695 166.287 168.502 153.181C175.163 144.281 179.744 134.078 181.998 123.319C183.771 114.859 190.682 107.778 199.326 107.778V107.778Z" fill="#BA0000"/>
+                                    <path d="M43.1256 172.478C37.0131 178.591 26.9479 178.694 21.7895 171.757C12.0539 158.665 5.3918 143.464 2.39828 127.286C-1.549 105.953 1.06803 83.9252 9.90368 64.1113C18.7393 44.2974 33.3779 27.63 51.8856 16.3109C65.9214 7.72673 81.6817 2.52481 97.9273 1.01847C106.535 0.220356 113.185 7.77686 112.722 16.4089V16.4089C112.259 25.041 104.819 31.5628 96.2757 32.8804C86.4101 34.4019 76.8899 37.8658 68.2864 43.1276C55.2049 51.1282 44.8581 62.9089 38.613 76.9137C32.3678 90.9185 30.518 106.488 33.308 121.567C35.1429 131.483 38.928 140.88 44.3889 149.236C49.1179 156.473 49.2382 166.366 43.1256 172.478V172.478Z" fill="#0EB500"/>
+                                    <path d="M27.0067 64.8767C19.3714 60.8236 16.3237 51.23 21.4444 44.2654C34.1285 27.014 51.7712 13.8515 72.1915 6.65558C97.5627 -2.28497 125.368 -1.36174 150.09 9.24208C174.812 19.8459 194.645 39.3555 205.654 63.9001C214.514 83.6551 217.138 105.51 213.38 126.59C211.864 135.101 202.812 139.505 194.613 136.766V136.766C186.414 134.027 182.103 125.122 183.101 116.535C184.669 103.063 182.601 89.3142 176.972 76.7644C169.191 59.4159 155.173 45.6262 137.699 38.1313C120.225 30.6363 100.572 29.9838 82.639 36.3031C69.6666 40.8744 58.2801 48.8525 49.5988 59.2737C44.0658 65.9155 34.6421 68.9298 27.0067 64.8767V64.8767Z" fill="#CA7900"/>
+                                </svg>
+                            </div>
+                            <div class="stats--chart-info">
+                                <div class="stats--chart-info-text">
+                                    <span class="fixed"></span>
+                                    <span>Fixed</span>
+                                </div>
+                                <div class="stats--chart-info-text">
+                                    <span class="unconfirmed"></span>
+                                    <span>Unconfirmed</span>
+                                </div>
+                                <div class="stats--chart-info-text">
+                                    <span class="pending"></span>
+                                    <span>Pending</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="planogram--wrapper">
+                    <div class="planogram--title">
+                        <h4 class="subheading">Upload Planogram</h4>
+                        <a href="#">
+                            <img src="{% static 'img/3-dots.png' %}" alt="stockfull" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="planogram--content">
+                        <label class="planogram--content-wrapper" for="file">
+                            <img src="{% static 'img/file.png' %}" alt="stockfull" class="img-fluid">
+                            <h2>Drop your files here, or browse</h2>
+                        </label>
+                        <input type="file" name="file" id="file">
+                    </div>
+                </div>
+            </div>
+            <!-- Activity--Stats--Planogram -->
+            <!-- Scene--Comment Area -->
+            <div class="scene--comment__area">
+                <div class="scene--recent--activity--wrapper">
+                    <div class="scene--wrapper">
+                        <div class="scene--title">
+                            <h4 class="subheading">Scenes</h4>
+                        </div>
+                        <div class="scene--content">
+                            <div class="scene--content-box">
+                                <div class="scene--content-box--img">
+                                    <div class="scene__img-box">
+                                        <img src="{% static 'img/fixed.png' %}" alt="stockfull" class="img-fluid" />
+                                    </div>
+                                </div>
+                                <div class="scene--content-box--text">
+                                    <div class="top__text">
+                                        <h5>Fixed</h5>
+                                        <a href="#">
+                                            <img src="{% static 'img/right--arrow.svg' %}" alt="stockfull" class="img-fluid" />
+                                        </a>
+                                    </div>
+                                    <div class="bottom__text">
+                                        <p>100 Files</p>
+                                        <span>30%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="scene--content-box">
+                                <div class="scene--content-box--img">
+                                    <div class="scene__img-box">
+                                        <img src="{% static 'img/unconfirmed.png' %}" alt="stockfull" class="img-fluid" />
+                                    </div>
+                                </div>
+                                <div class="scene--content-box--text">
+                                    <div class="top__text">
+                                        <h5>Unconfirmed</h5>
+                                        <a href="#">
+                                            <img src="{% static 'img/right--arrow.svg' %}" alt="stockfull" class="img-fluid" />
+                                        </a>
+                                    </div>
+                                    <div class="bottom__text">
+                                        <p>100 Files</p>
+                                        <span>35%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="scene--content-box">
+                                <div class="scene--content-box--img">
+                                    <div class="scene__img-box">
+                                        <img src="{% static 'img/pending.png' %}" alt="stockfull" class="img-fluid pending--img" />
+                                    </div>
+                                </div>
+                                <div class="scene--content-box--text">
+                                    <div class="top__text">
+                                        <h5>Pending</h5>
+                                        <a href="#">
+                                            <img src="{% static 'img/right--arrow.svg' %}" alt="stockfull" class="img-fluid" />
+                                        </a>
+                                    </div>
+                                    <div class="bottom__text">
+                                        <p>100 Files</p>
+                                        <span>35%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recent--activity-stats__area">
+                        <div class="recent--activity">
+                            <div class="recent--activity--title">
+                                <h4 class="subheading">Recent Activity</h4>
+                            </div>
+                            <div class="recent--activity--content">
+                                <div class="recent--activity--text">
+                                    <h5>Scene #234 - 11 Apr 21, 1830 hrs</h5>
+                                    <a href="#">
+                                        <img src="{% static 'img/right--arrow.svg' %}" alt="stockfull" class="img-fluid" />
+                                    </a>
+                                </div>
+                                <div class="recent--activity--text">
+                                    <h5>Camera Added - 11 Apr 21, 1430 hrs </h5>
+                                    <a href="#">
+                                        <img src="{% static 'img/right--arrow.svg' %}" alt="stockfull" class="img-fluid" />
+                                    </a>
+                                </div>
+                                <div class="recent--activity--text">
+                                    <h5>Scene #236 - 11 Apr 21, 1330 hrs</h5>
+                                    <a href="#">
+                                        <img src="{% static 'img/right--arrow.svg' %}" alt="stockfull" class="img-fluid" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stats--area">
+                            <div class="stats--title">
+                                <h4 class="subheading">Stats</h4>
+                            </div>
+                            <div class="recent-stats--content">
+                                <div class="single--stats--content">
+                                    <span>85+</span>
+                                    <span>New files uploaded</span>
+                                </div>
+                                <div class="single--stats--content">
+                                    <span>12+</span>
+                                    <span>People are currently watching Your content</span>
+                                </div>
+                                <div class="single--stats--content">
+                                    <span>10%</span>
+                                    <span>User increase this week</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment--wrapper">
+                    <div class="comment--title">
+                        <h4 class="subheading">Comments</h4>
+                    </div>
+                    <div class="comment--tab">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active comments" id="comment-tab" data-bs-toggle="tab" data-bs-target="#comment-tab-pane" type="button" role="tab" aria-controls="comment-tab-pane" aria-selected="true">
+                                    <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.4835 14.5872C15.9499 14.5872 17.6835 14.5872 18.7599 13.6257C19.8372 12.665 19.8373 11.1178 19.8373 8.02418C19.8373 4.93055 19.8372 3.38332 18.7599 2.42266C17.6835 1.46118 15.9499 1.46118 12.4835 1.46118H8.80666C5.3403 1.46118 3.60666 1.46118 2.53026 2.42266C1.45293 3.38332 1.45293 4.93055 1.45293 8.02418C1.45293 11.1178 1.45293 12.665 2.53026 13.6257C3.1305 14.1622 3.93482 14.3993 5.1298 14.5035" stroke="white" stroke-width="1.64075" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12.4835 14.5872C11.3474 14.5872 10.0954 14.9974 8.95282 15.5265C7.11623 16.3773 6.19793 16.803 5.74568 16.5315C5.29342 16.2608 5.37891 15.4199 5.5508 13.7389L5.58941 13.3566" stroke="white" stroke-width="1.64075" stroke-linecap="round"/>
+                                    </svg>                                        
+                                    <span>Comments</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link tags" id="tag-tab" data-bs-toggle="tab" data-bs-target="#tags-tab-pane" type="button" role="tab" aria-controls="tags-tab-pane" aria-selected="false">
+                                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.9042 16.5281C12.7194 16.693 12.5001 16.8239 12.2587 16.9131C12.0173 17.0024 11.7586 17.0483 11.4973 17.0483C11.236 17.0483 10.9773 17.0024 10.7359 16.9131C10.4945 16.8239 10.2752 16.693 10.0904 16.5281L2.23207 9.5147C1.85901 9.18183 1.64938 8.73033 1.64929 8.25952V3.23555C1.64929 2.25684 2.54093 1.46107 3.63847 1.46107H9.26683C9.79354 1.46107 10.3 1.64812 10.6732 1.98119L18.5316 8.99458C18.7164 9.15944 18.863 9.35518 18.963 9.57062C19.063 9.78606 19.1145 10.017 19.1145 10.2502C19.1145 10.4834 19.063 10.7143 18.963 10.9297C18.863 11.1451 18.7164 11.3409 18.5316 11.5058L12.9042 16.5281Z" stroke="black" stroke-width="1.64075" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4.86655 4.3324L5.32615 4.74259" stroke="black" stroke-width="1.64075" stroke-linecap="round"/>
+                                    </svg>
+                                    <span>Tags</span>                                        
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link activity" id="activity-tab" data-bs-toggle="tab" data-bs-target="#activity-tab-pane" type="button" role="tab" aria-controls="activity-tab-pane" aria-selected="false">
+                                    <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.9247 13.3824L16.9258 4.46078H15.2597L12.1908 14.334L10.2448 6.9737H8.62873L6.67942 13.3824H1.93109V14.8544H7.31253L8.1289 14.3043L9.3618 10.2896L11.2445 17.8432H12.9605L16.0761 7.37517L18.5086 14.334L19.3083 14.8693H25.2562V13.3824H19.9247Z" fill="black"/>
+                                    </svg>                                        
+                                    <span>Activity</span>
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="commentsTabContent">
+                            <div class="tab-pane fade show active" id="comment-tab-pane" role="tabpanel" aria-labelledby="comment-tab" tabindex="0">
+                                <div class="comment--content-wrapper">
+                                    <div class="no--comment">
+                                        <img src="{% static 'img/comments.svg' %}" alt="stockfull" class="img-fluid">
+                                        <h6>No Comments Yet</h6>
+                                    </div>
+                                    <!-- <div class="comments--list">
+                                    </div> -->
+                                    <div class="comment--input-box">
+                                        <div class="profile--img">
+                                            <img src="{% static 'img/profile.png' %}" alt="stockfull" class="img-fluid">
+                                        </div>
+                                        <div class="input--box">
+                                            <input type="text" placeholder="Add a comment">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tags-tab-pane" role="tabpanel" aria-labelledby="tag-tab" tabindex="0">
+                                tags goes Here
+                            </div>
+                            <div class="tab-pane fade" id="activity-tab-pane" role="tabpanel" aria-labelledby="activity-tab" tabindex="0">
+                                activity goes here
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Scene--Comment Area -->
+        </div>
+        <!-- Main Content End Here -->
+    </main>
+    <!-- Script File -->
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

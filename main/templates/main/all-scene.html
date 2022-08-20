@@ -1,0 +1,430 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockFull</title>
+    <!--Bootstap CSS File-->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Theme CSS File -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Media CSS File -->
+    <link rel="stylesheet" href="{% static 'css/media.css' %}">
+</head>
+<body>
+    <main class="main__area-wrapper">
+        <!-- Side Nav Start Here -->
+        <header class="sidenav__area" id="sidenav">
+            <div class="menu__wrapper">
+                <ul class="side__menus">
+                    <li class="menu__item">
+                        <a href="index.html" class="menu__link menu__active">
+                            <img src="{% static 'img/dashboard.png' %}" alt="stockFull" class="img-fluid">
+                            <img src="{% static 'img/dashboard-active.png' %}" alt="stockfull" class="img-fluid active-img">
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="scene.html" class="menu__link">
+                            <img src="{% static 'img/scenes.png' %}" alt="stockfull" class="img-fluid">
+                            <img src="{% static 'img/scene-active.png' %}" alt="stockfull" class="img-fluid">
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="all-scene.html" class="menu__link">
+                            <img src="{% static 'img/cameras.png' %}" alt="stockfull" class="img-fluid cameras-img">
+                            <img src="{% static 'img/all--scene-active.png' %}" alt="stockfull" class="img-fluid">
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">
+                            <img src="{% static 'img/trash.png' %}" alt="stockfull" class="img-fluid trash-img">
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">
+                            <img src="{% static 'img/settings.png' %}" alt="stockfull" class="img-fluid trash-img">
+                        </a>
+                    </li>
+                </ul>
+                <ul class="admin__menu">
+                    <li class="menu__item">
+                        <a href="" class="menu__link">
+                            <img src="{% static 'img/admin.png' %}" alt="stockFull" class="img-fluid">
+                        </a>
+                    </li>
+                </ul>    
+            </div>
+        </header>
+        <!-- Side Nav End Here -->
+        <!-- Main Content Start Here -->
+        <div class="main__content all-scene--page">
+            <!-- Top Nav Area -->
+            <div class="topnav__area">
+                <div class="page--title">
+                    <h3>All Scenes</h3>
+                </div>
+                <div class="nav__item-wrapper">
+                    <ul class="topnav--nav">
+                        <li class="topnav__item">
+                            <a href="" class="topnav__link notification">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M26 16.586V14H24V17C24.0001 17.2652 24.1054 17.5195 24.293 17.707L27 20.414V22H5V20.414L7.707 17.707C7.89455 17.5195 7.99994 17.2652 8 17V13C7.99721 11.5948 8.3653 10.2137 9.06709 8.99632C9.76887 7.7789 10.7795 6.76823 11.9969 6.06641C13.2143 5.36458 14.5953 4.99644 16.0005 4.99918C17.4058 5.00192 18.7853 5.37543 20 6.082V3.847C19.0481 3.42552 18.0356 3.15688 17 3.051V1H15V3.05C12.5346 3.30093 10.2498 4.45712 8.58737 6.29498C6.92498 8.13285 6.0031 10.5218 6 13V16.586L3.293 19.293C3.10545 19.4805 3.00006 19.7348 3 20V23C3 23.2652 3.10536 23.5196 3.29289 23.7071C3.48043 23.8946 3.73478 24 4 24H11V25C11 26.3261 11.5268 27.5979 12.4645 28.5355C13.4021 29.4732 14.6739 30 16 30C17.3261 30 18.5979 29.4732 19.5355 28.5355C20.4732 27.5979 21 26.3261 21 25V24H28C28.2652 24 28.5196 23.8946 28.7071 23.7071C28.8946 23.5196 29 23.2652 29 23V20C28.9999 19.7348 28.8946 19.4805 28.707 19.293L26 16.586ZM19 25C19 25.7956 18.6839 26.5587 18.1213 27.1213C17.5587 27.6839 16.7956 28 16 28C15.2044 28 14.4413 27.6839 13.8787 27.1213C13.3161 26.5587 13 25.7956 13 25V24H19V25Z" fill="black"/>
+                                    <path d="M26 12C28.2091 12 30 10.2091 30 8C30 5.79086 28.2091 4 26 4C23.7909 4 22 5.79086 22 8C22 10.2091 23.7909 12 26 12Z" fill="#0060FF"/>
+                                </svg>    
+                            </a>
+                        </li>
+                        <li class="topnav__item">
+                            <a href="#" class="topnav__link profile">
+                                <img src="{% static 'img/profile--img.png' %}" alt="stockfull" class="img-fluid">
+                            </a>
+                        </li>
+                        <li class="topnav__item toggle__menu">
+                            <button id="toggle__menu">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Top Nav Area -->
+            <div class="controll--btn__area">
+                <div class="left--btn-wrapper">
+                    <button class="sync---btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.66 10.37C21.6936 10.3109 21.7172 10.2467 21.73 10.18L22.48 6.18C22.5277 5.91478 22.4682 5.64146 22.3144 5.42017C22.1606 5.19888 21.9252 5.04774 21.66 5C21.3948 4.95226 21.1215 5.01183 20.9002 5.16561C20.6789 5.31939 20.5277 5.55478 20.48 5.82L20.11 7.82C19.2776 6.29992 18.0337 5.04521 16.5208 4.19978C15.0079 3.35436 13.2874 2.95244 11.5566 3.04013C9.82571 3.12782 8.15462 3.70157 6.73495 4.69557C5.31527 5.68957 4.20449 7.06357 3.53 8.66C3.43106 8.90537 3.43339 9.17995 3.53648 9.42361C3.63956 9.66726 3.835 9.86014 4.08 9.96C4.20206 10.0105 4.33292 10.0364 4.46502 10.0361C4.59713 10.0357 4.72786 10.0092 4.84966 9.95809C4.97146 9.90696 5.08193 9.83219 5.17467 9.73811C5.26742 9.64404 5.3406 9.53252 5.39 9.41C5.92854 8.0868 6.85476 6.95747 8.04698 6.1704C9.23919 5.38332 10.6416 4.97532 12.07 5C13.3333 4.99411 14.5757 5.3221 15.6715 5.95076C16.7673 6.57943 17.6775 7.48645 18.31 8.58L16.66 8.31C16.5287 8.28899 16.3945 8.29405 16.2651 8.32489C16.1358 8.35573 16.0137 8.41175 15.906 8.48976C15.7983 8.56776 15.707 8.66621 15.6374 8.7795C15.5677 8.89278 15.521 9.01868 15.5 9.15C15.479 9.28132 15.484 9.4155 15.5149 9.54486C15.5457 9.67423 15.6018 9.79625 15.6798 9.90397C15.7578 10.0117 15.8562 10.103 15.9695 10.1726C16.0828 10.2423 16.2087 10.289 16.34 10.31L20.59 11.02H20.75C20.8661 11.0214 20.9814 11.001 21.09 10.96C21.1266 10.9461 21.1605 10.9258 21.19 10.9C21.2617 10.8733 21.3291 10.8363 21.39 10.79L21.47 10.69C21.5219 10.6414 21.5688 10.5878 21.61 10.53C21.6343 10.4794 21.6512 10.4255 21.66 10.37ZM19.88 14.07C19.7573 14.0197 19.6259 13.9944 19.4933 13.9954C19.3607 13.9964 19.2297 14.0237 19.1078 14.0758C18.9859 14.1279 18.8756 14.2038 18.7833 14.2989C18.6909 14.394 18.6184 14.5066 18.57 14.63C18.0277 15.9393 17.105 17.0557 15.9212 17.8348C14.7374 18.6139 13.347 19.0198 11.93 19C10.6667 19.0059 9.42429 18.6779 8.32852 18.0492C7.23274 17.4206 6.32252 16.5136 5.69 15.42L7.34 15.69H7.5C7.76522 15.7112 8.028 15.6262 8.23054 15.4537C8.43308 15.2811 8.55878 15.0352 8.58 14.77C8.60122 14.5048 8.51621 14.242 8.34368 14.0395C8.17114 13.8369 7.92522 13.7112 7.66 13.69L3.41 13C3.30092 12.9799 3.18908 12.9799 3.08 13H3C2.88683 13.0301 2.77892 13.0773 2.68 13.14C2.61258 13.1921 2.55209 13.2526 2.5 13.32L2.41 13.42C2.37909 13.4803 2.35559 13.5441 2.34 13.61C2.30496 13.6611 2.2811 13.719 2.27 13.78L1.52 17.78C1.48788 17.9129 1.48336 18.051 1.50671 18.1857C1.53007 18.3204 1.5808 18.4489 1.65578 18.5633C1.73075 18.6776 1.82838 18.7754 1.94263 18.8505C2.05687 18.9256 2.18531 18.9765 2.32 19H2.5C2.73679 19.0039 2.96727 18.9236 3.15039 18.7734C3.33352 18.6232 3.45741 18.413 3.5 18.18L3.87 16.18C4.70152 17.7004 5.94471 18.9558 7.45701 19.802C8.96931 20.6482 10.6895 21.0511 12.4203 20.9645C14.1511 20.8779 15.8224 20.3052 17.2427 19.3121C18.6629 18.3191 19.7745 16.9459 20.45 15.35C20.5416 15.1045 20.5333 14.8329 20.4267 14.5935C20.3201 14.3541 20.1238 14.1661 19.88 14.07Z" fill="white"/>
+                        </svg>
+                        <span>Sync All</span>                            
+                    </button>
+                    <button class="add--camera-btn">
+                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.26641 6.76484C6.20165 6.70249 6.15014 6.62771 6.11495 6.54499C6.07977 6.46227 6.06164 6.37329 6.06164 6.2834C6.06164 6.1935 6.07977 6.10453 6.11495 6.02181C6.15014 5.93908 6.20165 5.86431 6.26641 5.80195L11.0242 1.05547C11.0856 0.991035 11.1594 0.939738 11.2412 0.904687C11.323 0.869636 11.411 0.851563 11.5 0.851562C11.589 0.851562 11.677 0.869636 11.7588 0.904687C11.8406 0.939738 11.9144 0.991035 11.9758 1.05547L16.7336 5.80195C16.7983 5.86431 16.8499 5.93908 16.885 6.02181C16.9202 6.10453 16.9384 6.1935 16.9384 6.2834C16.9384 6.37329 16.9202 6.46227 16.885 6.54499C16.8499 6.62771 16.7983 6.70249 16.7336 6.76484C16.6722 6.82928 16.5984 6.88058 16.5166 6.91563C16.4348 6.95068 16.3468 6.96875 16.2578 6.96875C16.1688 6.96875 16.0808 6.95068 15.999 6.91563C15.9172 6.88058 15.8434 6.82928 15.782 6.76484L12.1797 3.17383V14.2188C12.1797 14.399 12.1081 14.5719 11.9806 14.6994C11.8531 14.8268 11.6803 14.8984 11.5 14.8984C11.3197 14.8984 11.1469 14.8268 11.0194 14.6994C10.8919 14.5719 10.8203 14.399 10.8203 14.2188V3.17383L7.21797 6.76484C7.1566 6.82928 7.08279 6.88058 7.001 6.91563C6.91922 6.95068 6.83117 6.96875 6.74219 6.96875C6.65321 6.96875 6.56516 6.95068 6.48337 6.91563C6.40159 6.88058 6.32777 6.82928 6.26641 6.76484ZM21.4688 13.5391C21.2885 13.5391 21.1156 13.6107 20.9881 13.7381C20.8607 13.8656 20.7891 14.0385 20.7891 14.2188V20.5625C20.7891 20.6226 20.7652 20.6802 20.7227 20.7227C20.6802 20.7652 20.6226 20.7891 20.5625 20.7891H2.4375C2.37741 20.7891 2.31978 20.7652 2.2773 20.7227C2.23481 20.6802 2.21094 20.6226 2.21094 20.5625V14.2188C2.21094 14.0385 2.13933 13.8656 2.01186 13.7381C1.8844 13.6107 1.71151 13.5391 1.53125 13.5391C1.35099 13.5391 1.1781 13.6107 1.05064 13.7381C0.923172 13.8656 0.851563 14.0385 0.851562 14.2188V20.5625C0.851562 20.9831 1.01865 21.3865 1.31607 21.6839C1.61349 21.9813 2.01688 22.1484 2.4375 22.1484H20.5625C20.9831 22.1484 21.3865 21.9813 21.6839 21.6839C21.9813 21.3865 22.1484 20.9831 22.1484 20.5625V14.2188C22.1484 14.0385 22.0768 13.8656 21.9494 13.7381C21.8219 13.6107 21.649 13.5391 21.4688 13.5391Z" fill="white"/>
+                        </svg> 
+                        <span>Add Camera</span>                           
+                    </button>
+                    <button class="descending--btn">
+                        <svg width="25" height="31" viewBox="0 0 25 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.09375 28.0625H22.9062C23.1952 28.062 23.4739 28.1696 23.6874 28.3643C23.9009 28.559 24.0338 28.8265 24.0599 29.1143C24.086 29.402 24.0034 29.6891 23.8284 29.9191C23.6534 30.149 23.3987 30.305 23.1144 30.3565L22.9062 30.375H2.09375C1.80481 30.3755 1.52614 30.2679 1.31262 30.0732C1.0991 29.8785 0.966203 29.611 0.940096 29.3232C0.913989 29.0355 0.996566 28.7484 1.17157 28.5185C1.34657 28.2885 1.6013 28.1325 1.88562 28.081L2.09375 28.0625H22.9062H2.09375ZM12.2919 0.331L12.5 0.3125C12.7706 0.31241 13.0327 0.407246 13.2406 0.580494C13.4485 0.753742 13.589 0.994424 13.6377 1.26063L13.6562 1.46875V21.8003L19.8584 15.6004C20.0497 15.4089 20.3021 15.2906 20.5718 15.2661C20.8414 15.2415 21.111 15.3124 21.3337 15.4663L21.4956 15.6004C21.6868 15.792 21.8047 16.0446 21.8288 16.3142C21.8529 16.5838 21.7816 16.8534 21.6274 17.0758L21.4933 17.2354L13.3186 25.4124C13.127 25.6036 12.8744 25.7215 12.6048 25.7456C12.3352 25.7696 12.0657 25.6984 11.8432 25.5442L11.6814 25.4124L3.50668 17.2354C3.30183 17.0314 3.1808 16.7582 3.16743 16.4694C3.15407 16.1807 3.24934 15.8974 3.43448 15.6754C3.61961 15.4534 3.88118 15.3088 4.16764 15.2701C4.45409 15.2314 4.74465 15.3014 4.98206 15.4663L5.14162 15.6004L11.3437 21.8003V1.46875C11.3437 1.19813 11.4385 0.936049 11.6117 0.728152C11.785 0.520254 12.0257 0.379712 12.2919 0.331L12.5 0.3125L12.2919 0.331Z" fill="#0060FF"/>
+                        </svg>
+                        <span>Descending</span>                            
+                    </button>
+                    <button class="ascending--btn">
+                        <svg width="25" height="29" viewBox="0 0 25 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.09375 0.625C1.78709 0.625 1.493 0.746819 1.27616 0.963658C1.05932 1.1805 0.9375 1.47459 0.9375 1.78125C0.9375 2.08791 1.05932 2.382 1.27616 2.59884C1.493 2.81568 1.78709 2.9375 2.09375 2.9375H22.9062C23.2129 2.9375 23.507 2.81568 23.7238 2.59884C23.9407 2.382 24.0625 2.08791 24.0625 1.78125C24.0625 1.47459 23.9407 1.1805 23.7238 0.963658C23.507 0.746819 23.2129 0.625 22.9062 0.625H2.09375ZM13.3186 5.58762C13.2112 5.47995 13.0836 5.39452 12.9432 5.33623C12.8027 5.27794 12.6521 5.24793 12.5 5.24793C12.3479 5.24793 12.1973 5.27794 12.0568 5.33623C11.9164 5.39452 11.7888 5.47995 11.6814 5.58762L3.58762 13.6814C3.48012 13.7889 3.39485 13.9165 3.33666 14.057C3.27848 14.1974 3.24854 14.348 3.24854 14.5C3.24854 14.652 3.27848 14.8026 3.33666 14.943C3.39485 15.0835 3.48012 15.2111 3.58762 15.3186C3.69513 15.4261 3.82275 15.5114 3.96321 15.5696C4.10367 15.6278 4.25422 15.6577 4.40625 15.6577C4.55828 15.6577 4.70883 15.6278 4.84929 15.5696C4.98975 15.5114 5.11737 15.4261 5.22488 15.3186L11.3438 9.19744V27.2188C11.3438 27.5254 11.4656 27.8195 11.6824 28.0363C11.8992 28.2532 12.1933 28.375 12.5 28.375C12.8067 28.375 13.1008 28.2532 13.3176 28.0363C13.5344 27.8195 13.6562 27.5254 13.6562 27.2188V9.19744L19.7751 15.3186C19.9922 15.5357 20.2867 15.6577 20.5938 15.6577C20.9008 15.6577 21.1953 15.5357 21.4124 15.3186C21.6295 15.1015 21.7515 14.807 21.7515 14.5C21.7515 14.193 21.6295 13.8985 21.4124 13.6814L13.3186 5.58762Z" fill="#0060FF"/>
+                        </svg>
+                        <span>Ascending</span>                            
+                    </button>
+                    <button class="grid--btn">
+                        <svg width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="5" height="5" fill="#0060FF"/>
+                            <rect y="10" width="5" height="5" fill="#0060FF"/>
+                            <rect x="11" y="10" width="5" height="5" fill="#0060FF"/>
+                            <rect x="22" y="10" width="5" height="5" fill="#0060FF"/>
+                            <rect y="20" width="5" height="5" fill="#0060FF"/>
+                            <rect x="11" y="20" width="5" height="5" fill="#0060FF"/>
+                            <rect x="22" y="20" width="5" height="5" fill="#0060FF"/>
+                            <rect x="11" width="5" height="5" fill="#0060FF"/>
+                            <rect x="22" width="5" height="5" fill="#0060FF"/>
+                        </svg>
+                        <span>Filter</span>                            
+                    </button>
+                </div>
+            </div>
+            <!-- All Scene Table -->
+            <div class="all-scene--table">
+                <div class="all--scene--title">
+                    <h4 class="subheading">Recent Scene</h4>
+                </div>
+                <div class="all--scene--content table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="width:30%">Alert ID</th>
+                                <th style="width:14%">Store</th>
+                                <th style="width:14%">Status</th>
+                                <th style="width:14%">Type</th>
+                                <th style="width:14%">Section</th>
+                                <th style="width:14%">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="width:30%"><a href="camera-gslv2.html">Scene #234</a></td>
+                                <td style="width:14%">Store 1</td>
+                                <td class="status--fixed" style="width:14%">Fixed</td>
+                                <td style="width:14%">
+                                    <img src="{% static 'img/desktop--mobile.png' %}" alt="stockfull" class="img-fluid">
+                                </td>
+                                <td style="width:14%">#media</td>
+                                <td style="width:14%">
+                                    <div class="action__btn">
+                                        <button>
+                                            <img src="{% static 'img/plus.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                        <button>
+                                            <img src="{% static 'img/redo.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                        <button>
+                                            <img src="{% static 'img/edit.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%"><a href="camera-gslv2.html">Scene #34</a></td>
+                                <td style="width:14%">Store 2</td>
+                                <td class="status--pending" style="width:14%">Pending</td>
+                                <td style="width:14%">
+                                    <img src={% static 'img/desktop.png' %}" alt="stockfull" class="img-fluid">
+                                </td>
+                                <td style="width:14%">#illustration</td>
+                                <td style="width:14%">
+                                    <div class="action__btn">
+                                        <button>
+                                            <img src="{% static 'img/plus.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                        <button>
+                                            <img src="{% static 'img/redo.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                        <button>
+                                            <img src="{% static 'img/edit.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%"><a href="camera-gslv2.html">Scene #534</a></td>
+                                <td style="width:14%">Store 3</td>
+                                <td class="status--unconfirmed" style="width:14%">Unconfirmed</td>
+                                <td style="width:14%">
+                                    <img src="{% static 'img/mobile.png' %}" alt="stockfull" class="img-fluid">
+                                </td>
+                                <td style="width:14%">#document</td>
+                                <td style="width:14%">
+                                    <div class="action__btn">
+                                        <button>
+                                            <img src="{% static 'img/plus.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                        <button>
+                                            <img src="{% static 'img/redo.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                        <button>
+                                            <img src="{% static 'img/edit.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%"><a href="camera-gslv2.html">Scene #234</a></td>
+                                <td style="width:14%">Store 1</td>
+                                <td class="status--fixed" style="width:14%">Fixed</td>
+                                <td style="width:14%">
+                                    <img src="{% static 'img/desktop--mobile.png' %}" alt="stockfull" class="img-fluid">
+                                </td>
+                                <td style="width:14%">#media</td>
+                                <td style="width:14%">
+                                    <div class="action__btn">
+                                        <button>
+                                            <img src="{% static 'img/plus.png' %}"" alt="stockfull" class="img-fluid">
+                                        </button>
+                                        <button>
+                                            <img src="{% static 'img/redo.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                        <button>
+                                            <img src="{% static 'img/edit.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%"><a href="camera-gslv2.html">Scene #34</a></td>
+                                <td style="width:14%">Store 2</td>
+                                <td class="status--pending" style="width:14%">Pending</td>
+                                <td style="width:14%">
+                                    <img src="{% static 'img/desktop.png' %}" alt="stockfull" class="img-fluid">
+                                </td>
+                                <td style="width:14%">#illustration</td>
+                                <td style="width:14%">
+                                    <div class="action__btn">
+                                        <button>
+                                            <img src="{% static 'img/plus.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                        <button>
+                                            <img src="{% static 'img/redo.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                        <button>
+                                            <img src="{% static 'img/edit.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%"><a href="camera-gslv2.html">Scene #534</a></td>
+                                <td style="width:14%">Store 3</td>
+                                <td class="status--unconfirmed" style="width:14%">Unconfirmed</td>
+                                <td style="width:14%">
+                                    <img src="{% static 'img/mobile.png' %}" alt="stockfull" class="img-fluid">
+                                </td>
+                                <td style="width:14%">#document</td>
+                                <td style="width:14%">
+                                    <div class="action__btn">
+                                        <button>
+                                            <img src="{% static 'img/plus.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                        <button>
+                                            <img src="{% static 'img/redo.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                        <button>
+                                            <img src="{% static 'img/edit.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%"><a href="camera-gslv2.html">Scene #234</a></td>
+                                <td style="width:14%">Store 1</td>
+                                <td class="status--fixed" style="width:14%">Fixed</td>
+                                <td style="width:14%">
+                                    <img src="{% static 'img/desktop--mobile.png' %}" alt="stockfull" class="img-fluid">
+                                </td>
+                                <td style="width:14%">#media</td>
+                                <td style="width:14%">
+                                    <div class="action__btn">
+                                        <button>
+                                            <img src="{% static 'img/plus.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                        <button>
+                                            <img src="{% static 'img/redo.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                        <button>
+                                            <img src="{% static 'img/edit.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%"><a href="camera-gslv2.html">Scene #34</a></td>
+                                <td style="width:14%">Store 2</td>
+                                <td class="status--pending" style="width:14%">Pending</td>
+                                <td style="width:14%">
+                                    <img src="{% static 'img/desktop.png' %}" alt="stockfull" class="img-fluid">
+                                </td>
+                                <td style="width:14%">#illustration</td>
+                                <td style="width:14%">
+                                    <div class="action__btn">
+                                        <button>
+                                            <img src="{% static 'img/plus.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                        <button>
+                                            <img src="{% static 'img/redo.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                        <button>
+                                            <img src="{% static 'img/edit.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%"><a href="camera-gslv2.html">Scene #534</a></td>
+                                <td style="width:14%">Store 3</td>
+                                <td class="status--unconfirmed" style="width:14%">Unconfirmed</td>
+                                <td style="width:14%">
+                                    <img src="{% static 'img/mobile.png' %}" alt="stockfull" class="img-fluid">
+                                </td>
+                                <td style="width:14%">#document</td>
+                                <td style="width:14%">
+                                    <div class="action__btn">
+                                        <button>
+                                            <img src="{% static 'img/plus.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                        <button>
+                                            <img src="{% static 'img/redo.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                        <button>
+                                            <img src="{% static 'img/edit.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%"><a href="camera-gslv2.html">Scene #234</a></td>
+                                <td style="width:14%">Store 1</td>
+                                <td class="status--fixed" style="width:14%">Fixed</td>
+                                <td style="width:14%">
+                                    <img src="{% static 'img/desktop--mobile.png' %}" alt="stockfull" class="img-fluid">
+                                </td>
+                                <td style="width:14%">#media</td>
+                                <td style="width:14%">
+                                    <div class="action__btn">
+                                        <button>
+                                            <img src="{% static 'img/plus.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                        <button>
+                                            <img src="{% static 'img/redo.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                        <button>
+                                            <img src="{% static 'img/edit.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%"><a href="camera-gslv2.html">Scene #34</a></td>
+                                <td style="width:14%">Store 2</td>
+                                <td class="status--pending" style="width:14%">Pending</td>
+                                <td style="width:14%">
+                                    <img src="{% static 'img/desktop.png' %}" alt="stockfull" class="img-fluid">
+                                </td>
+                                <td style="width:14%">#illustration</td>
+                                <td style="width:14%">
+                                    <div class="action__btn">
+                                        <button>
+                                            <img src="{% static 'img/plus.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                        <button>
+                                            <img src="{% static 'img/redo.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                        <button>
+                                            <img src="{% static 'img/edit.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%"><a href="camera-gslv2.html">Scene #534</a></td>
+                                <td style="width:14%">Store 3</td>
+                                <td class="status--unconfirmed" style="width:14%">Unconfirmed</td>
+                                <td style="width:14%">
+                                    <img src="{% static 'img/mobile.png' %}" alt="stockfull" class="img-fluid">
+                                </td>
+                                <td style="width:14%">#document</td>
+                                <td style="width:14%">
+                                    <div class="action__btn">
+                                        <button>
+                                            <img src="{% static 'img/plus.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                        <button>
+                                            <img src="{% static 'img/redo.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                        <button>
+                                            <img src="{% static 'img/edit.png' %}" alt="stockfull" class="img-fluid">
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- All Scene Table -->
+        </div>
+        <!-- Main Content End Here -->
+    </main>
+    <!-- Script File -->
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

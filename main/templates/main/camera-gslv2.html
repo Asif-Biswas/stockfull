@@ -1,0 +1,256 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockFull</title>
+    <!--Bootstap CSS File-->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Theme CSS File -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Media CSS File -->
+    <link rel="stylesheet" href="{% static 'css/media.css' %}">
+</head>
+<body>
+    <main class="main__area-wrapper">
+        <!-- Side Nav Start Here -->
+        <header class="sidenav__area" id="sidenav">
+            <div class="menu__wrapper">
+                <ul class="side__menus">
+                    <li class="menu__item">
+                        <a href="index.html" class="menu__link menu__active">
+                            <img src="{% static 'img/dashboard.png' %}" alt="stockFull" class="img-fluid">
+                            <img src="{% static 'img/dashboard-active.png' %}" alt="stockfull" class="img-fluid active-img">
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="scene.html" class="menu__link">
+                            <img src="{% static 'img/scenes.png' %}" alt="stockfull" class="img-fluid">
+                            <img src="{% static 'img/scene-active.png' %}" alt="stockfull" class="img-fluid">
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="all-scene.html" class="menu__link">
+                            <img src="{% static 'img/cameras.png' %}" alt="stockfull" class="img-fluid cameras-img">
+                            <img src="{% static 'img/all--scene-active.png' %}" alt="stockfull" class="img-fluid">
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">
+                            <img src="{% static 'img/trash.png' %}" alt="stockfull" class="img-fluid trash-img">
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">
+                            <img src="{% static 'img/settings.png' %}" alt="stockfull" class="img-fluid trash-img">
+                        </a>
+                    </li>
+                </ul>
+                <ul class="admin__menu">
+                    <li class="menu__item">
+                        <a href="" class="menu__link">
+                            <img src="{% static 'img/admin.png' %}" alt="stockFull" class="img-fluid">
+                        </a>
+                    </li>
+                </ul>    
+            </div>
+        </header>
+        <!-- Side Nav End Here -->
+        <!-- Main Content Start Here -->
+        <div class="main__content camera-gslv--page">
+            <!-- Top Nav Area -->
+            <div class="topnav__area">
+                <div class="page--title">
+                    <h3>Camera > GSLB2</h3>
+                </div>
+                <div class="nav__item-wrapper">
+                    <ul class="topnav--nav">
+                        <li class="topnav__item">
+                            <a href="" class="topnav__link notification">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M26 16.586V14H24V17C24.0001 17.2652 24.1054 17.5195 24.293 17.707L27 20.414V22H5V20.414L7.707 17.707C7.89455 17.5195 7.99994 17.2652 8 17V13C7.99721 11.5948 8.3653 10.2137 9.06709 8.99632C9.76887 7.7789 10.7795 6.76823 11.9969 6.06641C13.2143 5.36458 14.5953 4.99644 16.0005 4.99918C17.4058 5.00192 18.7853 5.37543 20 6.082V3.847C19.0481 3.42552 18.0356 3.15688 17 3.051V1H15V3.05C12.5346 3.30093 10.2498 4.45712 8.58737 6.29498C6.92498 8.13285 6.0031 10.5218 6 13V16.586L3.293 19.293C3.10545 19.4805 3.00006 19.7348 3 20V23C3 23.2652 3.10536 23.5196 3.29289 23.7071C3.48043 23.8946 3.73478 24 4 24H11V25C11 26.3261 11.5268 27.5979 12.4645 28.5355C13.4021 29.4732 14.6739 30 16 30C17.3261 30 18.5979 29.4732 19.5355 28.5355C20.4732 27.5979 21 26.3261 21 25V24H28C28.2652 24 28.5196 23.8946 28.7071 23.7071C28.8946 23.5196 29 23.2652 29 23V20C28.9999 19.7348 28.8946 19.4805 28.707 19.293L26 16.586ZM19 25C19 25.7956 18.6839 26.5587 18.1213 27.1213C17.5587 27.6839 16.7956 28 16 28C15.2044 28 14.4413 27.6839 13.8787 27.1213C13.3161 26.5587 13 25.7956 13 25V24H19V25Z" fill="black"/>
+                                    <path d="M26 12C28.2091 12 30 10.2091 30 8C30 5.79086 28.2091 4 26 4C23.7909 4 22 5.79086 22 8C22 10.2091 23.7909 12 26 12Z" fill="#0060FF"/>
+                                </svg>    
+                            </a>
+                        </li>
+                        <li class="topnav__item">
+                            <a href="#" class="topnav__link profile">
+                                <img src="{% static 'img/profile--img.png' %}" alt="stockfull" class="img-fluid">
+                            </a>
+                        </li>
+                        <li class="topnav__item toggle__menu">
+                            <button id="toggle__menu">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Top Nav Area -->
+            <!-- Camera GSLV Area -->
+            <div class="camera--gslv__area">
+                <div class="camera-gslv--img">
+                    <img src="{% static 'img/camera-gslv-img.png' %}" alt="stockfull" class="img-fluid">
+                </div>
+                <div class="fixed-pending--comment">
+                    <div class="fixed--pending-btn">
+                        <button class="fixed__btn">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.66675 17.1111H23.3334V18.6666H4.66675V17.1111Z" fill="white"/>
+                                <path d="M20.2222 20.2222H23.3333V21.7777H20.2222V20.2222Z" fill="white"/>
+                                <path d="M10.1112 7.71549L13.2223 4.6666V14.7777C13.2223 14.984 13.3043 15.1818 13.4501 15.3277C13.596 15.4735 13.7938 15.5555 14.0001 15.5555C14.2064 15.5555 14.4042 15.4735 14.5501 15.3277C14.6959 15.1818 14.7779 14.984 14.7779 14.7777V4.6666L17.889 7.73882C17.9617 7.81091 18.0479 7.86794 18.1426 7.90664C18.2374 7.94535 18.3389 7.96497 18.4412 7.96438H18.5268C17.9758 7.149 17.6412 6.20687 17.5546 5.2266L14.0001 1.67993L9.03011 6.61104C8.90966 6.75927 8.84797 6.94664 8.85679 7.13744C8.8656 7.32823 8.94432 7.50911 9.07792 7.6456C9.21153 7.78209 9.39069 7.86465 9.58125 7.87754C9.77181 7.89042 9.96046 7.83274 10.1112 7.71549Z" fill="white"/>
+                                <path d="M24.0101 10.4612C23.7855 10.4872 23.5596 10.5002 23.3334 10.5001C22.0736 10.5007 20.8478 10.0912 19.8412 9.33344H16.3334V10.889H22.5168C23.3334 13.1757 24.6712 16.839 24.889 17.4845V23.3334H3.11122V17.4845C3.329 16.839 5.48344 10.889 5.48344 10.889H11.6668V9.33344H5.499C5.17455 9.32064 4.85477 9.41394 4.58811 9.5992C4.32145 9.78446 4.12244 10.0516 4.02122 10.3601C1.55566 17.1112 1.55566 17.189 1.55566 17.3679V23.3334C1.55566 23.746 1.71955 24.1417 2.01128 24.4334C2.303 24.7251 2.69866 24.889 3.11122 24.889H24.889C25.3016 24.889 25.6972 24.7251 25.9889 24.4334C26.2807 24.1417 26.4446 23.746 26.4446 23.3334V17.3679C26.4446 17.189 26.4446 17.1112 24.0101 10.4612Z" fill="white"/>
+                            </svg>
+                            <span>Fixed</span>                                
+                        </button>
+                        <button class="pending__btn">
+                            <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 0C12.8174 0 9.76515 1.26428 7.51472 3.51472C5.26428 5.76515 4 8.8174 4 12H0L5.33333 17.3333L10.6667 12H6.66667C6.66667 9.52465 7.65 7.15068 9.40034 5.40034C11.1507 3.65 13.5246 2.66667 16 2.66667C18.4754 2.66667 20.8493 3.65 22.5997 5.40034C24.35 7.15068 25.3333 9.52465 25.3333 12C25.3333 14.4754 24.35 16.8493 22.5997 18.5997C20.8493 20.35 18.4754 21.3333 16 21.3333C14 21.3333 12.12 20.6667 10.5867 19.6L8.66667 21.52C10.7754 23.1239 13.3506 23.9948 16 24C19.1826 24 22.2348 22.7357 24.4853 20.4853C26.7357 18.2348 28 15.1826 28 12C28 8.8174 26.7357 5.76515 24.4853 3.51472C22.2348 1.26428 19.1826 0 16 0ZM18.6667 12C18.6667 11.2928 18.3857 10.6145 17.8856 10.1144C17.3855 9.61429 16.7072 9.33333 16 9.33333C15.2928 9.33333 14.6145 9.61429 14.1144 10.1144C13.6143 10.6145 13.3333 11.2928 13.3333 12C13.3333 12.7072 13.6143 13.3855 14.1144 13.8856C14.6145 14.3857 15.2928 14.6667 16 14.6667C16.7072 14.6667 17.3855 14.3857 17.8856 13.8856C18.3857 13.3855 18.6667 12.7072 18.6667 12Z" fill="white"/>
+                            </svg>                                
+                            <span>Pending</span>
+                        </button>
+                    </div>
+                    <div class="comment--tab">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active comments" id="comment-tab" data-bs-toggle="tab" data-bs-target="#comment-tab-pane" type="button" role="tab" aria-controls="comment-tab-pane" aria-selected="true">
+                                    <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.4835 14.5872C15.9499 14.5872 17.6835 14.5872 18.7599 13.6257C19.8372 12.665 19.8373 11.1178 19.8373 8.02418C19.8373 4.93055 19.8372 3.38332 18.7599 2.42266C17.6835 1.46118 15.9499 1.46118 12.4835 1.46118H8.80666C5.3403 1.46118 3.60666 1.46118 2.53026 2.42266C1.45293 3.38332 1.45293 4.93055 1.45293 8.02418C1.45293 11.1178 1.45293 12.665 2.53026 13.6257C3.1305 14.1622 3.93482 14.3993 5.1298 14.5035" stroke="white" stroke-width="1.64075" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12.4835 14.5872C11.3474 14.5872 10.0954 14.9974 8.95282 15.5265C7.11623 16.3773 6.19793 16.803 5.74568 16.5315C5.29342 16.2608 5.37891 15.4199 5.5508 13.7389L5.58941 13.3566" stroke="white" stroke-width="1.64075" stroke-linecap="round"/>
+                                    </svg>                                        
+                                    <span>Comments</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link tags" id="tag-tab" data-bs-toggle="tab" data-bs-target="#tags-tab-pane" type="button" role="tab" aria-controls="tags-tab-pane" aria-selected="false">
+                                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.9042 16.5281C12.7194 16.693 12.5001 16.8239 12.2587 16.9131C12.0173 17.0024 11.7586 17.0483 11.4973 17.0483C11.236 17.0483 10.9773 17.0024 10.7359 16.9131C10.4945 16.8239 10.2752 16.693 10.0904 16.5281L2.23207 9.5147C1.85901 9.18183 1.64938 8.73033 1.64929 8.25952V3.23555C1.64929 2.25684 2.54093 1.46107 3.63847 1.46107H9.26683C9.79354 1.46107 10.3 1.64812 10.6732 1.98119L18.5316 8.99458C18.7164 9.15944 18.863 9.35518 18.963 9.57062C19.063 9.78606 19.1145 10.017 19.1145 10.2502C19.1145 10.4834 19.063 10.7143 18.963 10.9297C18.863 11.1451 18.7164 11.3409 18.5316 11.5058L12.9042 16.5281Z" stroke="black" stroke-width="1.64075" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4.86655 4.3324L5.32615 4.74259" stroke="black" stroke-width="1.64075" stroke-linecap="round"/>
+                                    </svg>
+                                    <span>Tags</span>                                        
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link activity" id="activity-tab" data-bs-toggle="tab" data-bs-target="#activity-tab-pane" type="button" role="tab" aria-controls="activity-tab-pane" aria-selected="false">
+                                    <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.9247 13.3824L16.9258 4.46078H15.2597L12.1908 14.334L10.2448 6.9737H8.62873L6.67942 13.3824H1.93109V14.8544H7.31253L8.1289 14.3043L9.3618 10.2896L11.2445 17.8432H12.9605L16.0761 7.37517L18.5086 14.334L19.3083 14.8693H25.2562V13.3824H19.9247Z" fill="black"/>
+                                    </svg>                                        
+                                    <span>Activity</span>
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="commentsTabContent">
+                            <div class="tab-pane fade show active" id="comment-tab-pane" role="tabpanel" aria-labelledby="comment-tab" tabindex="0">
+                                <div class="comment--content-wrapper">
+                                    <div class="no--comment">
+                                        <img src="{% static 'img/comments.svg' %}" alt="stockfull" class="img-fluid">
+                                        <h6>No Comments Yet</h6>
+                                    </div>
+                                    <!-- <div class="comments--list">
+                                    </div> -->
+                                    <div class="comment--input-box">
+                                        <div class="profile--img">
+                                            <img src="{% static 'img/profile.png' %}" alt="stockfull" class="img-fluid">
+                                        </div>
+                                        <div class="input--box">
+                                            <input type="text" placeholder="Add a comment">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tags-tab-pane" role="tabpanel" aria-labelledby="tag-tab" tabindex="0">
+                                tags goes Here
+                            </div>
+                            <div class="tab-pane fade" id="activity-tab-pane" role="tabpanel" aria-labelledby="activity-tab" tabindex="0">
+                                activity goes here
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Camera GSLV Area -->
+            <!-- Recent Scene Table -->
+            <div class="recent-scene--table">
+                <div class="recent--scene--content table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="width:30%">Scene ID</th>
+                                <th style="width:14%">Section</th>
+                                <th style="width:14%">Status</th>
+                                <th style="width:14%">Date Modified</th>
+                                <th style="width:14%">Share with</th>
+                                <th style="width:14%">Store</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="width:30%">Scene #234</td>
+                                <td style="width:14%">Sweets Aisle 24</td>
+                                <td class="status--fixed" style="width:14%">Fixed</td>
+                                <td style="width:14%">11 Apr 21, 1830 hrs</td>
+                                <td style="width:14%">
+                                    <div class="shared--img">
+                                        <img src="{% static 'img/share--img-1.png' %}" alt="stockfull" class="img-fluid">
+                                        <img src="{% static 'img/share--img-2.png' %}" alt="stockfull" class="img-fluid">
+                                        <img src="{% static 'img/share--img-3.png' %}" alt="stockfull" class="img-fluid">
+                                    </div>
+                                </td>
+                                <td style="width:14%">Store 1</td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%">Scene #534</td>
+                                <td style="width:14%">Drinks Aisle 54 </td>
+                                <td class="status--pending" style="width:14%">Pending</td>
+                                <td style="width:14%">11 Apr 21, 1830 hrs</td>
+                                <td style="width:14%">
+                                    <div class="shared--img">
+                                        <img src="{% static 'img/share--img-1.png' %}" alt="stockfull" class="img-fluid">
+                                        <img src="{% static 'img/share--img-2.png' %}" alt="stockfull" class="img-fluid">
+                                    </div>
+                                </td>
+                                <td style="width:14%">Store1</td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%">Scene #102</td>
+                                <td style="width:14%">Sweets Aisle 45</td>
+                                <td class="status--unconfirmed" style="width:14%">Unconfirmed</td>
+                                <td style="width:14%">11 Apr 21, 1730 hrs</td>
+                                <td style="width:14%">
+                                    <div class="shared--img">
+                                        <img src="{% static 'img/share--img-1.png' %}" alt="stockfull" class="img-fluid">
+                                        <img src="{% static 'img/share--img-2.png' %}" alt="stockfull" class="img-fluid">
+                                        <img src="{% static 'img/share--img-3.png' %}" alt="stockfull" class="img-fluid">
+                                    </div>
+                                </td>
+                                <td style="width:14%">Store 5</td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%">Scene #54</td>
+                                <td style="width:14%">Home Aisle 12</td>
+                                <td class="status--fixed" style="width:14%">Fixed</td>
+                                <td style="width:14%">11 Apr 21, 1730 hrs</td>
+                                <td style="width:14%">
+                                    <div class="shared--img">
+                                        <img src="{% static 'img/share--img-1.png' %}" alt="stockfull" class="img-fluid">
+                                    </div>
+                                </td>
+                                <td style="width:14%">Store 7</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Recent Scene Table -->
+        </div>
+        <!-- Main Content End Here -->
+    </main>
+    <!-- Script File -->
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
