@@ -7,7 +7,6 @@ kiwisolver==1.4.4
 matplotlib==3.5.3
 networkx==2.8.5
 numpy==1.23.2
-opencv-contrib-python==4.6.0.66
 opencv-contrib-python-headless==4.6.0.66
 packaging==21.3
 Pillow==9.2.0
