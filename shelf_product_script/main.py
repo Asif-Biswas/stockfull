@@ -24,9 +24,9 @@ from skimage.metrics import structural_similarity
 import cv2
 import numpy as np
 import sys
-import os
+import time
 
-import cv2
+
 def draw_contours(contours, second):
     for c in contours:
         area = cv2.contourArea(c)
@@ -156,7 +156,7 @@ def run_inference(base_frame, out, vid):
 
 if __name__ == '__main__':
     file = sys.argv[1]
-    print(sys.argv)
+    #print(sys.argv)
     vid = cv2.VideoCapture(file)
     base_frame = get_base_frame(vid)
     run_inference(base_frame)

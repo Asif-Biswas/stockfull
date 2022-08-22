@@ -21,4 +21,9 @@ def camera_gslv2(request):
 
 def test(request):
     shelf_product_script.run('media/video.mp4', 'media/output.mp4')
-    return render(request, 'main/test.html')
+    c = 0
+    # check if output.mp4 exists in media folder
+    if os.path.exists('media/output.mp4'):
+        c = 1
+
+    return render(request, 'main/test.html', {'c': c})
